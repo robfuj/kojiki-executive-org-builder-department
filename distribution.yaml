@@ -1,0 +1,13 @@
+name: kojiki-executive-org-builder-department
+version: 1.0.0
+description: "Executive Org Builder decision-system agent (Kojiki Decision System)"
+hermes_requires: ">=0.12.0"
+author: "robfuj"
+license: "MIT"
+distribution_owned:
+  - SOUL.md
+  - config.yaml
+  - distribution.yaml
+  - AGENT.md
+  - BOTS.md
+  - bots/
