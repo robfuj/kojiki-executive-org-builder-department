@@ -1,0 +1,57 @@
+{
+  "$id": "https://hermes-ios.github.io/21-executive-org-builder.json",
+  "title": "Executive Org Builder spec",
+  "type": "object",
+  "required": [
+    "line",
+    "key",
+    "primary_question",
+    "purpose",
+    "operating_tree",
+    "decision_states",
+    "critical_prompts",
+    "decision_outputs",
+    "example"
+  ],
+  "properties": {
+    "line": {
+      "type": "string"
+    },
+    "key": {
+      "type": "string"
+    },
+    "primary_question": {
+      "type": "string"
+    },
+    "purpose": {
+      "type": "string"
+    },
+    "operating_tree": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "decision_states": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "critical_prompts": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "decision_outputs": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "example": {
+      "type": "object"
+    }
+  }
+}

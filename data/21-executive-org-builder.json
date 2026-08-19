@@ -1,0 +1,71 @@
+{
+  "line": "Executive Org Builder",
+  "key": "21-executive-org-builder",
+  "number": "21",
+  "primary_question": "Given this organization's industry, jurisdiction, and research, which departments should exist and what should each own?",
+  "purpose": "A meta-Executive agent: runs orientation + initial field research, then derives and proposes the organization's departmental structure (a subset of the 20 canonical lines) with charters, decision rights, and dependencies \u2014 so the org is built from evidence, not an org chart.",
+  "sub_functions": [
+    "Orientation",
+    "Industry Research",
+    "Jurisdiction/Regulatory Research",
+    "Capability Gap Analysis",
+    "Department Design",
+    "Charter Authoring",
+    "Decision-Rights Assignment",
+    "Dependency Mapping"
+  ],
+  "roles": [
+    "Chief Executive Agent",
+    "Strategy Agent",
+    "Organization Design Agent"
+  ],
+  "inputs": "Orientation answers (name, function, industry, country/regime, geography, business model); research findings on the field, competitors, regulations, and standard operating model.",
+  "outputs": "org-structure.json (department list + charters + decision rights + dependencies); per-department charter files; a recommended install manifest for 22-decision-system-installer.",
+  "learning_focus": "Which department designs matched reality; which capabilities were missing/duplicated; which charters needed revision after operations began.",
+  "line_prompt": "You are the executive organization-building agent. After orientation, research the organization's industry, jurisdiction, geography, and business model. Identify the capabilities the organization must perform, then map them onto the 20 canonical lines. Recommend WHICH lines to instantiate (not all orgs need all 20), justify each by evidence, assign decision rights, and declare cross-department dependencies. Produce charters and an install manifest.",
+  "operating_tree": [
+    "ORIENTATION",
+    "INDUSTRY RESEARCH",
+    "JURISDICTION RESEARCH",
+    "CAPABILITY NEEDS",
+    "LINE MAPPING",
+    "GAP / DUPLICATION ANALYSIS",
+    "DEPARTMENT DESIGN",
+    "CHARTER AUTHORING",
+    "DECISION-RIGHTS ASSIGNMENT",
+    "DEPENDENCY MAPPING",
+    "STRUCTURE PROPOSAL",
+    "INSTALL MANIFEST"
+  ],
+  "decision_states": [
+    "ORIENTING",
+    "RESEARCHING",
+    "MAPPING",
+    "DESIGNING",
+    "CHARTERING",
+    "RIGHTS-ASSIGNING",
+    "PROPOSED",
+    "INSTALLED",
+    "REVISED"
+  ],
+  "critical_prompts": [
+    "What industry/sector and jurisdiction apply?",
+    "What capabilities must this org perform?",
+    "Which canonical lines cover those capabilities?",
+    "Which lines are unnecessary for this org?",
+    "Which capabilities are missing from the 20 lines?",
+    "Where are duplicated responsibilities?",
+    "What decision rights does each department own?",
+    "What are the cross-department dependencies?",
+    "What evidence supports standing up each department?",
+    "What would make us remove a department?"
+  ],
+  "decision_outputs": [
+    "Instantiate",
+    "Defer",
+    "Merge",
+    "Split",
+    "Drop",
+    "Revise"
+  ]
+}

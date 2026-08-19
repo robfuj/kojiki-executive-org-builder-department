@@ -1,0 +1,46 @@
+{
+  "decision_object": {
+    "decision_id": "ORG-2026-001",
+    "decision_name": "Department design for a fintech startup",
+    "owning_function": "Executive Org Builder",
+    "decision_owner_role": "Chief Executive Agent",
+    "trigger_condition": "New fintech org; orientation complete (US, payments, regulated)",
+    "current_state": "No departments; research done on payments regs + competitors",
+    "required_inputs": [
+      "industry research",
+      "jurisdiction research",
+      "capability needs"
+    ],
+    "evidence_threshold": "Each instantiated line justified by a capability the org must perform",
+    "available_options": [
+      "Instantiate all 20",
+      "Instantiate subset",
+      "Defer some",
+      "Merge others"
+    ],
+    "decision_criteria": "Cover required capabilities; minimize duplication; respect regulatory need",
+    "constraints": "US payments => Legal + Risk/Compliance mandatory; small team => merge Ops+CS initially",
+    "risk_level": "high",
+    "delegation_level": "Own",
+    "escalation_conditions": "Regulator requires a function we propose to drop",
+    "expected_outcome": "org-structure.json with 12 instantiated lines + charters + manifest",
+    "verification_method": "Each line traces to a required capability + charter file exists",
+    "actual_outcome": "12 lines instantiated; Compliance mandatory kept; Ops+CS merged",
+    "learning_extracted": "Regulatory lines should never be dropped for lean reasons",
+    "rule_version": "ORG-RULE-001",
+    "last_reviewed": "2026-08-18"
+  },
+  "learning_ledger": {
+    "case": "Design departments for a US payments fintech",
+    "decision": "Instantiate 12 of 20 lines; merge Ops+CS; keep Compliance",
+    "assumption": "Small team cannot staff all 20 separately",
+    "action": "Map capabilities; write charters; emit manifest",
+    "expected_result": "Coverage of required capabilities, no gaps",
+    "actual_result": "12 lines; Compliance retained; Ops+CS merged",
+    "variance": "Confirmed regulator forces Compliance",
+    "cause": "Payments is regulated; compliance non-optional",
+    "learning": "Regulatory lines are mandatory regardless of lean preference",
+    "rule_update": "Never drop Legal/Risk-Compliance for a regulated industry"
+  },
+  "orientation_required": true
+}

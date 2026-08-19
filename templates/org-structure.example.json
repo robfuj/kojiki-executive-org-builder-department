@@ -1,0 +1,53 @@
+{
+  "organization": "Example Fintech Co",
+  "industry": "Payments / Fintech",
+  "jurisdiction": "United States (federal + state money-transmission)",
+  "business_model": "B2B SaaS payments infrastructure",
+  "departments": [
+    {
+      "line_key": "15-legal",
+      "charter": "Licensing, MSB compliance, contract law.",
+      "decision_rights": [
+        "Own",
+        "Approve"
+      ],
+      "status": "instantiate"
+    },
+    {
+      "line_key": "16-risk-compliance",
+      "charter": "BSA/AML, sanctions, controls testing.",
+      "decision_rights": [
+        "Own"
+      ],
+      "status": "instantiate"
+    },
+    {
+      "line_key": "09-operations",
+      "charter": "Onboarding + support merged with CS initially.",
+      "decision_rights": [
+        "Own"
+      ],
+      "status": "merge:06-customer-success"
+    }
+  ],
+  "dependencies": [
+    "15-legal -> 16-risk-compliance",
+    "04-sales -> 15-legal"
+  ],
+  "install_manifest": {
+    "recommended_agents": [
+      "01",
+      "02",
+      "03",
+      "04",
+      "07",
+      "08",
+      "15",
+      "16"
+    ],
+    "always_include": [
+      "00-kojiki-ontology",
+      "21-executive-org-builder"
+    ]
+  }
+}

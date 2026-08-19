@@ -1,0 +1,88 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://hermes-ios.github.io/org-structure.json",
+  "title": "OrgStructure",
+  "description": "Emitted by 21-executive-org-builder after orientation + research.",
+  "type": "object",
+  "required": [
+    "organization",
+    "industry",
+    "jurisdiction",
+    "departments",
+    "dependencies",
+    "install_manifest"
+  ],
+  "properties": {
+    "organization": {
+      "type": "string"
+    },
+    "industry": {
+      "type": "string"
+    },
+    "jurisdiction": {
+      "type": "string"
+    },
+    "business_model": {
+      "type": "string"
+    },
+    "departments": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "line_key",
+          "charter",
+          "decision_rights",
+          "status"
+        ],
+        "properties": {
+          "line_key": {
+            "type": "string"
+          },
+          "charter": {
+            "type": "string"
+          },
+          "decision_rights": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "instantiate",
+              "defer",
+              "merge",
+              "split",
+              "drop"
+            ]
+          }
+        }
+      }
+    },
+    "dependencies": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "install_manifest": {
+      "type": "object",
+      "properties": {
+        "recommended_agents": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "always_include": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}
