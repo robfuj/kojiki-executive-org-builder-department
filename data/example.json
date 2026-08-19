@@ -28,7 +28,7 @@
     "actual_outcome": "12 lines instantiated; Compliance mandatory kept; Ops+CS merged",
     "learning_extracted": "Regulatory lines should never be dropped for lean reasons",
     "rule_version": "ORG-RULE-001",
-    "last_reviewed": "2026-08-18"
+    "last_reviewed": "2026-08-19"
   },
   "learning_ledger": {
     "case": "Design departments for a US payments fintech",

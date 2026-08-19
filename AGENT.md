@@ -55,6 +55,26 @@ python3 install_bots.py <slug> <slug> ...     # e.g. brand performance-marketing
   (21) to choose them. 21 is only relevant when one agent designs the *whole* org.
 - 0 candidate bot(s) are defined for this line (see `BOTS.md`).
 
+## Run your work on SYNAPSIS (the cognitive substrate)
+This department does not reason as one monolithic agent. Run every decision through
+**SYNAPSIS** — the shared transformation engine in [`00-kojiki-ontology`](https://github.com/robfuj/kojiki-ontology) (`synapsis/`).
+SYNAPSIS decomposes reasoning into bounded transformations so errors are inspectable, not
+silent:
+```
+SOURCE → RECORD → EVIDENCE → INTERPRETATION → STRATEGY → INTERACTION → OUTPUT → OUTCOME → LEARNING
+```
+- Each transformation has **one authority** and a defined "what it must NOT silently become."
+- **Three steps are dedicated niche bots**, not inline steps:
+  - **EVIDENCE** → `bots/evidence/` (this department's own extraction specialist).
+  - **AUDIT** → `synapsis/audit-bot/` (**shared** across all departments; independent — challenges your claim graph, never decides for you).
+  - **LEARNING** → `synapsis/learning-bot/` (**shared**; writes to cross-line Organizational Memory; proposes but never silently rewrites doctrine).
+- The other steps (RECORD / INTERPRETATION / STRATEGY / INTERACTION / OUTPUT) run inline
+  inside this department bot, respecting the same boundaries.
+- **Brain** routes/sequences/adjudicates but never originates your specialist analysis.
+- Meta-rule: *evidence ≠ interpretation ≠ belief ≠ doctrine.* Validation:
+  `python3 synapsis/validate.py <your-transformation-record.json>` (in the ontology repo).
+Emit your Decision Object (docx S9) + Learning Ledger (docx S7) as the OUTPUT→OUTCOME→LEARNING tail of this chain.
+
 ## Sibling-agent communication (Cross-Functional Handoff Standard, docx S11)
 - On completion of orientation, register with `handoffs/registry.json` in
   [`00-kojiki-ontology`](https://github.com/robfuj/kojiki-ontology): your
