@@ -38,9 +38,26 @@ Before any decision work, the agent must orient: establish identity, learn the o
 ### Then
 After orientation the agent loads its function schema (ontology/functions.md + lines/<n>-<line>/), starts a research pass for its industry/jurisdiction, and announces itself to registered siblings so cross-functional decisions can be routed per the Handoff Standard.
 
+## Instantiate your working bots (docx S5 — do this after research)
+After orientation, **research the field** (your industry, jurisdiction, competitors,
+and the org's actual needs). Then, from the candidate menu in `BOTS.md`, **decide which
+sub-function bots this organization needs** and install only those:
+```bash
+cd bots
+python3 install_bots.py <slug> <slug> ...     # e.g. brand performance-marketing market-research
+# (omit slugs to install all candidates)
+```
+- Each installed bot becomes a full child decision system under `bots/<slug>/` with its
+  own README + AGENT.md + mirrored schemas + a stub decision record.
+- Installed bots register under this department's `group_id` in `handoffs/registry.json`,
+  so they discover and hand off to each other.
+- This department owns its own bot decisions — it does NOT need the Executive Org Builder
+  (21) to choose them. 21 is only relevant when one agent designs the *whole* org.
+- 0 candidate bot(s) are defined for this line (see `BOTS.md`).
+
 ## Sibling-agent communication (Cross-Functional Handoff Standard, docx S11)
 - On completion of orientation, register with `handoffs/registry.json` in
-  [`00-kojiki-ontology`](https://github.com/hermes-ios/00-kojiki-ontology): your
+  [`00-kojiki-ontology`](https://github.com/robfuj/kojiki-ontology): your
   `agent_name`, `function_line`, `group_id`, and an endpoint/queue for incoming requests.
 - To hand off a decision, emit a handoff record with: Sender, Receiver, Trigger,
   Required data, Acceptance criteria, SLA, Exception, Feedback, Learning.

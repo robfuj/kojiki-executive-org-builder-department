@@ -11,7 +11,13 @@
         "Own",
         "Approve"
       ],
-      "status": "instantiate"
+      "status": "instantiate",
+      "recommended_bots": [
+        "regulatory",
+        "commercial-legal",
+        "privacy",
+        "contracting"
+      ]
     },
     {
       "line_key": "16-risk-compliance",
@@ -19,7 +25,12 @@
       "decision_rights": [
         "Own"
       ],
-      "status": "instantiate"
+      "status": "instantiate",
+      "recommended_bots": [
+        "aml-kyc",
+        "regulatory-compliance",
+        "monitoring"
+      ]
     },
     {
       "line_key": "09-operations",
@@ -27,7 +38,11 @@
       "decision_rights": [
         "Own"
       ],
-      "status": "merge:06-customer-success"
+      "status": "merge:06-customer-success",
+      "recommended_bots": [
+        "process-management",
+        "exception-management"
+      ]
     }
   ],
   "dependencies": [
@@ -48,6 +63,23 @@
     "always_include": [
       "00-kojiki-ontology",
       "21-executive-org-builder"
-    ]
+    ],
+    "recommended_bots": {
+      "15-legal": [
+        "regulatory",
+        "commercial-legal",
+        "privacy",
+        "contracting"
+      ],
+      "16-risk-compliance": [
+        "aml-kyc",
+        "regulatory-compliance",
+        "monitoring"
+      ],
+      "09-operations": [
+        "process-management",
+        "exception-management"
+      ]
+    }
   }
 }

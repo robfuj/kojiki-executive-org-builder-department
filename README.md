@@ -1,8 +1,8 @@
 # 21 — Executive Org Builder
 
-> Part of the **Hermes Organizational Decision System**. This repo is the
+> Part of the **Kojiki Decision System**. This repo is the
 > **Executive Org Builder** line. It references the shared ontology in
-> [`00-kojiki-ontology`](https://github.com/hermes-ios/00-kojiki-ontology) for the
+> [`00-kojiki-ontology`](https://github.com/robfuj/kojiki-ontology) for the
 > canonical schemas, taxonomy, decision-rights, and handoff standards.
 
 ## Primary question

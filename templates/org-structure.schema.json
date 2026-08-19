@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://hermes-ios.github.io/org-structure.json",
+  "$id": "https://robfuj.github.io/org-structure.json",
   "title": "OrgStructure",
   "description": "Emitted by 21-executive-org-builder after orientation + research.",
   "type": "object",
@@ -57,6 +57,13 @@
               "split",
               "drop"
             ]
+          },
+          "recommended_bots": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "Slugs from this line's BOTS.md menu (docx S5 sub-functions) to install."
           }
         }
       }
@@ -80,6 +87,16 @@
           "type": "array",
           "items": {
             "type": "string"
+          }
+        },
+        "recommended_bots": {
+          "type": "object",
+          "description": "Map line_key -> [bot slugs] to install in that department.",
+          "additionalProperties": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
           }
         }
       }
