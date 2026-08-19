@@ -8,8 +8,8 @@ PARENT="$(dirname "$HERE")"
 ONT="kojiki-ontology"
 if [ -d "$PARENT/$ONT" ]; then echo "ontology present: $PARENT/$ONT";
 else
-  echo "cloning ontology -> $PARENT/$ONT"
-  git clone --depth 1 "https://github.com/$OWNER/$ONT.git" "$PARENT/$ONT"
+ echo "cloning ontology -> $PARENT/$ONT"
+ git clone --depth 1 "https://github.com/$OWNER/$ONT.git" "$PARENT/$ONT"
 fi
 echo ""
 echo "Installed: $ONT + 21-executive-org-builder"

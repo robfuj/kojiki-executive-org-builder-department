@@ -3,7 +3,7 @@
 This line records every decision with the **shared canonical schemas** (mirrored
 from `00-kojiki-ontology`). Do not redefine fields locally.
 
-## Decision Object (docx S9) — `schema/decision-object.json`
+## Decision Object — `schema/decision-object.json`
 | `decision_id` |
 | `decision_name` |
 | `owning_function` |
@@ -25,7 +25,7 @@ from `00-kojiki-ontology`). Do not redefine fields locally.
 | `rule_version` |
 | `last_reviewed` |
 
-## Learning Ledger (docx S7) — `schema/learning-ledger.json`
+## Learning Ledger — `schema/learning-ledger.json`
 | `case` |
 | `decision` |
 | `assumption` |

@@ -1,7 +1,7 @@
 # Bot Recommendations (from org-structure.json)
 
 After orientation + research, this agent emits `org-structure.json` (template in
-`templates/`). Each instantiated department carries `recommended_bots` — the docx S5
+`templates/`). Each instantiated department carries `recommended_bots` — the 
 sub-function slugs that org needs.
 
 `recommend_bots.py` converts that into install commands:

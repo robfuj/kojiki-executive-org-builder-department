@@ -63,7 +63,7 @@
             "items": {
               "type": "string"
             },
-            "description": "Slugs from this line's BOTS.md menu (docx S5 sub-functions) to install."
+            "description": "Slugs from this line's BOTS.md menu ( sub-functions) to install."
           }
         }
       }
